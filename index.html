@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Management Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Add Tool Section -->
+        <div class="section">
+            <h2>Add Tool to Inventory</h2>
+            <input type="text" id="toolName" placeholder="Tool Name">
+            <input type="number" id="toolQuantity" placeholder="Quantity" min="1">
+            <button onclick="addTool()">Add Tool</button>
+        </div>
+
+        <!-- Inventory List Dropdown -->
+        <div class="section">
+            <h2>Inventory List</h2>
+            <select id="inventoryListDropdown">
+                <option>No Tools Added</option>
+            </select>
+        </div>
+
+        <!-- Release Tool Section -->
+        <div class="section">
+            <h2>Release Tool</h2>
+            <select id="inventoryDropdown">
+                <option>No Tools Available</option>
+            </select>
+            <input type="text" id="employeeName" placeholder="Employee Name">
+            <input type="date" id="releaseDate">
+            <input type="number" id="releaseQuantity" placeholder="Quantity" min="1">
+            <button onclick="releaseTool()">Release Tool</button>
+        </div>
+
+        <!-- Release Summary Dropdown -->
+        <div class="section">
+            <h2>Release Summary</h2>
+            <select id="releaseSummaryDropdown">
+                <option>No releases yet</option>
+            </select>
+            <button onclick="clearReleaseSummary()">Clear Release Summary</button>
+            <button onclick="printReleaseSummary()">Print Release Summary</button>
+          
+          <div>
+    <button onclick="addTool()">Add Tool</button>
+    <button onclick="releaseTool()">Release Tool</button>
+    <button onclick="saveData()">Save</button> <!-- Save Button -->
+    <button onclick="loadData()">Load Saved Data</button> <!-- Load Button -->
+</div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
